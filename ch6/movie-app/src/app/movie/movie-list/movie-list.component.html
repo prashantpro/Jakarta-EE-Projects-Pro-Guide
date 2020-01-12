@@ -1,0 +1,92 @@
+<section>
+  <h3>Today's Movies</h3>
+  <div class="scrolling-wrapper-flexbox" *ngIf="movies$ | async as movies">
+    <div class="card" *ngFor="let movie of movies">
+      <div class="title">
+        <span>{{ movie.rating }}</span>
+      </div>
+      <div class="info">
+        <span>{{ movie.name }}</span>
+        <img src="{{movie.thumbnail}}">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>Recommended for you</h3>
+  <div class="scrolling-wrapper-flexbox">
+    <div class="card">
+      <div class="title">
+        <span>3</span>
+      </div>
+      <div class="info">
+        Info
+      </div>
+    </div>
+    <div class="card">
+      <div class="title">
+        <span>4</span>
+      </div>
+      <div class="info">
+        Info
+      </div>
+    </div>
+    <div class="card">
+      <div class="title">
+        <span>4</span>
+      </div>
+      <div class="info">
+        Info
+      </div>
+    </div>
+    <div class="card">
+      <div class="title">
+        <span>4</span>
+      </div>
+      <div class="info">
+        Info
+      </div>
+    </div>
+    <div class="card">
+      <div class="title">
+        <span>4</span>
+      </div>
+      <div class="info">
+        Info
+      </div>
+    </div>
+    <div class="card">
+      <div class="title">
+        <span>4</span>
+      </div>
+      <div class="info">
+        Info
+      </div>
+    </div>
+    <div class="card">
+      <div class="title">
+        <span>4</span>
+      </div>
+      <div class="info">
+        Info
+      </div>
+    </div>
+    <div class="card">
+      <div class="title">
+        <span>4</span>
+      </div>
+      <div class="info">
+        Info
+      </div>
+    </div>
+    <div class="card">
+      <div class="title">
+        <span>4</span>
+      </div>
+      <div class="info">
+        Info
+      </div>
+    </div>
+  </div>
+</section>

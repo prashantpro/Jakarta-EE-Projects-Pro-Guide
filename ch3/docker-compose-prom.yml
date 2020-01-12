@@ -1,0 +1,27 @@
+version: "3"
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ${PWD}/prometheus.yml:/etc/prometheus/prometheus.yml
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    ports:
+      - 9090:9090
+
+  product-ads:
+    build: ./product-ads
+    image: prashantpro/product-ads:1.0
+    ports:
+      - 8081:9080
+
+  product-catalogs:
+    build: ./product-catalogs
+    image: prashantpro/product-catalogs:1.0
+    ports:
+      - 8080:9080
+      - 9443:9443
+
+
+
+
